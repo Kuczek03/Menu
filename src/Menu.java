@@ -24,25 +24,25 @@ public class Menu implements ActionListener {
 
         panel.setBackground(new Color(88, 163, 168));
 
-        snakeIcon = new ImageIcon("C:/Users/theko/OneDrive/Pulpit/snake.png");
+        snakeIcon = new ImageIcon(".\\images\\snake.png");
         snakeLabel = new JLabel(snakeIcon);
         snakeLabel.setBounds(33, 22, 65, 65);
         panel.add(snakeLabel);
 
 
-        ticTacToeIcon = new ImageIcon("C:/Users/theko/OneDrive/Pulpit/tictactoe.png");
+        ticTacToeIcon = new ImageIcon(".\\images\\tictactoe.png");
         ticTacToeLabel = new JLabel(ticTacToeIcon);
         ticTacToeLabel.setBounds(113, 22, 65, 65);
         panel.add(ticTacToeLabel);
 
-        icon3 = new ImageIcon("C:/Users/theko/OneDrive/Pulpit/pong.png");
+        icon3 = new ImageIcon(".\\images\\pong.png");
         label3 = new JLabel(icon3);
         label3.setBounds(193, 22, 65, 65);
         panel.add(label3);
 
 
         game1 = new JButton();
-        game1.setIcon(new ImageIcon("C:/Users/theko/OneDrive/Pulpit/Gra1.png"));
+        game1.setIcon(new ImageIcon(".\\images\\Gra1.png"));
         game1.setHorizontalTextPosition(SwingConstants.CENTER);
         game1.setVerticalTextPosition(SwingConstants.CENTER);
         game1.setBounds(30, 100, 70, 30);
@@ -51,7 +51,7 @@ public class Menu implements ActionListener {
         panel.add(game1);
 
         game2 = new JButton();
-        game2.setIcon(new ImageIcon("C:/Users/theko/OneDrive/Pulpit/Gra2.png"));
+        game2.setIcon(new ImageIcon(".\\images\\Gra2.png"));
         game2.setHorizontalTextPosition(SwingConstants.CENTER);
         game2.setVerticalTextPosition(SwingConstants.CENTER);
         game2.setBounds(110, 100, 70, 30);
@@ -60,7 +60,7 @@ public class Menu implements ActionListener {
         panel.add(game2);
 
         game3 = new JButton();
-        game3.setIcon(new ImageIcon("C:/Users/theko/OneDrive/Pulpit/Gra3.png"));
+        game3.setIcon(new ImageIcon(".\\images\\Gra3.png"));
         game3.setHorizontalTextPosition(SwingConstants.CENTER);
         game3.setVerticalTextPosition(SwingConstants.CENTER);
         game3.setBounds(190, 100, 70, 30);
@@ -69,7 +69,7 @@ public class Menu implements ActionListener {
         panel.add(game3);
 
         exit = new JButton();
-        exit.setIcon(new ImageIcon("C:/Users/theko/OneDrive/Pulpit/EXIT.png"));
+        exit.setIcon(new ImageIcon(".\\images\\EXIT.png"));
         exit.setHorizontalTextPosition(SwingConstants.CENTER);
         exit.setVerticalTextPosition(SwingConstants.CENTER);
         exit.setBounds(190,220,70,30);
