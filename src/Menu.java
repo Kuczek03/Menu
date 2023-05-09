@@ -1,6 +1,7 @@
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import javax.swing.*;
 
 import static java.awt.Color.*;
@@ -18,11 +19,14 @@ public class Menu implements ActionListener {
         ramka = new JFrame("Wybierz grę!");
         ramka.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ramka.setPreferredSize(new Dimension(300, 300));
-        ramka.setResizable(true);
+        ramka.setResizable(false);
 
         panel = new JPanel(null);
 
         panel.setBackground(new Color(88, 163, 168));
+
+        ImageIcon menuIMG = new ImageIcon(".\\images\\pad.png");
+        ramka.setIconImage(menuIMG.getImage());
 
         snakeIcon = new ImageIcon(".\\images\\snake.png");
         snakeLabel = new JLabel(snakeIcon);
@@ -85,15 +89,28 @@ public class Menu implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent option) {
+
         if (option.getSource() == game1) {
-            // Kod dla gry 1
-            System.out.println("Wybrano grę 1");
+            ramka.setVisible(false);
+            //System.out.println("Wybrano grę 1");
+            JFrame snakeFrame = new JFrame("Sssnake");
+            ImageIcon snakeIMG = new ImageIcon("C:\\Users\\theko\\OneDrive\\Dokumenty\\GitHub\\Menu\\images\\snake.png");
+            snakeFrame.setIconImage(snakeIMG.getImage());
+            snakeFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            snakeFrame.setResizable(false);
+            snakeFrame.add(new SnakeGame());
+            snakeFrame.pack();
+            snakeFrame.setLocationRelativeTo(null);
+            snakeFrame.setVisible(true);
+
         } else if (option.getSource() == game2) {
-            // Kod dla gry 2
-            System.out.println("Wybrano grę 2");
+            ramka.setVisible(false);
+            //System.out.println("Wybrano grę 2");
+
         } else if (option.getSource() == game3) {
-            // Kod dla gry 3
-            System.out.println("Wybrano grę 3");
+            ramka.setVisible(false);
+            //System.out.println("Wybrano grę 3");
+
         } else if (option.getSource() == exit) {
             System.exit(0);
         }
