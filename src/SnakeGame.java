@@ -14,9 +14,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import javax.imageio.ImageIO;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.Timer;
+import javax.swing.*;
 
 public class SnakeGame extends JPanel implements ActionListener, KeyListener {
 
@@ -27,7 +25,7 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
 
     private static final int MAX_SQUARES = (BOARD_WIDTH / SQUARE_SIZE) * (BOARD_HEIGHT / SQUARE_SIZE);
 
-    private static final int GAME_SPEED = 100;
+    private static final int GAME_SPEED = 75;
 
     private ArrayList<Point> snake = new ArrayList<Point>();
 
@@ -37,9 +35,7 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
 
     // Aktualne położenie jedzienia
     private Point food = new Point();
-
     private int score = 0;
-
     private boolean gameOver = false;
 
     public SnakeGame(){
@@ -57,8 +53,6 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
         snake.clear();
         snake.add(new Point(BOARD_WIDTH / 2, BOARD_HEIGHT / 2));
         placeFood();
-
-
         score = 0;
         gameOver = false;
     }

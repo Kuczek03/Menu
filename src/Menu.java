@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
+
 import javax.swing.*;
 
 import static java.awt.Color.*;
@@ -91,10 +91,11 @@ public class Menu implements ActionListener {
     public void actionPerformed(ActionEvent option) {
 
         if (option.getSource() == game1) {
+
             ramka.setVisible(false);
             //System.out.println("Wybrano grę 1");
             JFrame snakeFrame = new JFrame("Sssnake");
-            ImageIcon snakeIMG = new ImageIcon("C:\\Users\\theko\\OneDrive\\Dokumenty\\GitHub\\Menu\\images\\snake.png");
+            ImageIcon snakeIMG = new ImageIcon(".\\images\\snake.png");
             snakeFrame.setIconImage(snakeIMG.getImage());
             snakeFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             snakeFrame.setResizable(false);
@@ -104,12 +105,14 @@ public class Menu implements ActionListener {
             snakeFrame.setVisible(true);
 
         } else if (option.getSource() == game2) {
+
             ramka.setVisible(false);
-            //System.out.println("Wybrano grę 2");
+            System.out.println("Wybrano grę 2");
 
         } else if (option.getSource() == game3) {
+
             ramka.setVisible(false);
-            //System.out.println("Wybrano grę 3");
+            System.out.println("Wybrano grę 3");
 
         } else if (option.getSource() == exit) {
             System.exit(0);
