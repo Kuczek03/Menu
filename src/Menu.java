@@ -11,7 +11,7 @@ public class Menu implements ActionListener {
 
     private final JFrame ramka;
     private final JPanel panel;
-    private final JButton game1, game2, game3, exit;
+    private final JButton game1, game2, /*game3,*/ exit;
     private final ImageIcon snakeIcon, ticTacToeIcon, icon3;
     private final JLabel snakeLabel, ticTacToeLabel, label3;
 
@@ -63,14 +63,14 @@ public class Menu implements ActionListener {
         game2.addActionListener(this);
         panel.add(game2);
 
-        game3 = new JButton();
+        /*game3 = new JButton();
         game3.setIcon(new ImageIcon(".\\images\\Gra3.png"));
         game3.setHorizontalTextPosition(SwingConstants.CENTER);
         game3.setVerticalTextPosition(SwingConstants.CENTER);
         game3.setBounds(190, 100, 70, 30);
         game3.setBackground(white);
         game3.addActionListener(this);
-        panel.add(game3);
+        panel.add(game3);*/
 
         exit = new JButton();
         exit.setIcon(new ImageIcon(".\\images\\EXIT.png"));
@@ -103,18 +103,19 @@ public class Menu implements ActionListener {
             snakeFrame.pack();
             snakeFrame.setLocationRelativeTo(null);
             snakeFrame.setVisible(true);
-
         } else if (option.getSource() == game2) {
 
             ramka.setVisible(false);
+
+            TicTacToe tictactoe = new TicTacToe();
             System.out.println("Wybrano grę 2");
 
-        } else if (option.getSource() == game3) {
+        } /*else if (option.getSource() == game3) {
 
             ramka.setVisible(false);
             System.out.println("Wybrano grę 3");
 
-        } else if (option.getSource() == exit) {
+        } */else if (option.getSource() == exit) {
             System.exit(0);
         }
     }

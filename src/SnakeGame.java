@@ -90,7 +90,7 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
             }
         }
 
-        for (int i = snake.size() - 1; i > 0; i--) {
+        for (int i = snake.size()-1; i > 0; i--) {
             Point prev = snake.get(i - 1);
             Point curr = snake.get(i);
             curr.setLocation(prev);
@@ -123,12 +123,9 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
 
         g.setColor(Color.GREEN);
         for (Point p : snake) {
-            //g.fillRect(p.x, p.y, SQUARE_SIZE, SQUARE_SIZE);
             g.drawImage(snakeImg, p.x, p.y, SQUARE_SIZE, SQUARE_SIZE, null);
         }
 
-        //g.setColor(Color.RED);
-        //g.fillRect(food.x, food.y, SQUARE_SIZE, SQUARE_SIZE);
         g.drawImage(foodImg, food.x, food.y, SQUARE_SIZE, SQUARE_SIZE, null);
 
         g.setColor(Color.WHITE);
