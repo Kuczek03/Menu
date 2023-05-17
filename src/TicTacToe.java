@@ -99,7 +99,7 @@ public class TicTacToe implements ActionListener{
     }
 
     public void check() {
-        //check X win conditions
+        //sprawdź czy X wygrywa
         if(
                 (button[0].getText()=="X") &&
                         (button[1].getText()=="X") &&
@@ -156,7 +156,7 @@ public class TicTacToe implements ActionListener{
         ) {
             xWins(2,4,6);
         }
-        //check O win conditions
+        //sprawdź czy 0 wygrywa
         if(
                 (button[0].getText()=="O") &&
                         (button[1].getText()=="O") &&

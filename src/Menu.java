@@ -12,13 +12,13 @@ public class Menu implements ActionListener {
     private final JFrame ramka;
     private final JPanel panel;
     private final JButton game1, game2, /*game3,*/ exit;
-    private final ImageIcon snakeIcon, ticTacToeIcon, icon3;
-    private final JLabel snakeLabel, ticTacToeLabel, label3;
+    private final ImageIcon snakeIcon, ticTacToeIcon/*,icon3*/;
+    private final JLabel snakeLabel, ticTacToeLabel/*, label3*/;
 
     public Menu() {
         ramka = new JFrame("Wybierz grę!");
         ramka.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        ramka.setPreferredSize(new Dimension(300, 300));
+        ramka.setPreferredSize(new Dimension(233, 300));
         ramka.setResizable(false);
 
         panel = new JPanel(null);
@@ -39,10 +39,10 @@ public class Menu implements ActionListener {
         ticTacToeLabel.setBounds(113, 22, 65, 65);
         panel.add(ticTacToeLabel);
 
-        icon3 = new ImageIcon(".\\images\\pong.png");
+        /*icon3 = new ImageIcon(".\\images\\pong.png");
         label3 = new JLabel(icon3);
         label3.setBounds(193, 22, 65, 65);
-        panel.add(label3);
+        panel.add(label3);*/
 
 
         game1 = new JButton();
@@ -76,7 +76,7 @@ public class Menu implements ActionListener {
         exit.setIcon(new ImageIcon(".\\images\\EXIT.png"));
         exit.setHorizontalTextPosition(SwingConstants.CENTER);
         exit.setVerticalTextPosition(SwingConstants.CENTER);
-        exit.setBounds(190,220,70,30);
+        exit.setBounds(110,220,70,30);
         exit.setBackground(white);
         exit.addActionListener(this);
         panel.add(exit);
