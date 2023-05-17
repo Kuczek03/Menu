@@ -16,6 +16,7 @@ public class Menu implements ActionListener {
     private final JLabel snakeLabel, ticTacToeLabel/*, label3*/;
 
     public Menu() {
+
         ramka = new JFrame("Wybierz grę!");
         ramka.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ramka.setPreferredSize(new Dimension(233, 300));
@@ -43,7 +44,6 @@ public class Menu implements ActionListener {
         label3 = new JLabel(icon3);
         label3.setBounds(193, 22, 65, 65);
         panel.add(label3);*/
-
 
         game1 = new JButton();
         game1.setIcon(new ImageIcon(".\\images\\Gra1.png"));
@@ -118,10 +118,6 @@ public class Menu implements ActionListener {
         } */else if (option.getSource() == exit) {
             System.exit(0);
         }
-    }
-
-    public static void main(String[] args) {
-        new Menu();
     }
 
 }
